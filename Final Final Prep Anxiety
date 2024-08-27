@@ -1,0 +1,16 @@
+# https://www.programiz.com/online-compiler/80npH97TiUUlt
+
+clases = [  0*60+33,1*60+57,1*60+41,2*60+51,3*60+00,
+            2*60+53,2*60+57,2*60+55,2*60+55,0*60+42,
+            1*60+2 ,2*60+19,1*60+44,2*60+46,2*60+55 ]
+
+def getAvance(clases,seenSoFar):
+    total = sum(clases)
+    soFar = sum(clases[0:seenSoFar])
+    return round((100/total)*soFar,2)
+
+total = len(clases)
+avg = round((sum(clases)/total)/60,2)
+print("En total son",total,"clases de",avg,"horas de duracion (promedio).")
+
+print("Porcentaje de avance: ",getAvance(clases,6))
